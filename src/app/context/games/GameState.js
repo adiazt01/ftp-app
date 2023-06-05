@@ -21,7 +21,13 @@ function GameState({ children }) {
     });
   };
 
-  const getGame = () => {};
+  const getGame = async (index) => {
+    const gamesData = await fetchGames();
+    dispatch({
+      type: "GET_GAME",
+      payload: gamesData[index]
+    })
+  };
 
   return (
     <GameContext.Provider
