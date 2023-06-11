@@ -1,14 +1,12 @@
 "use client";
 
-import GameContext from "@/app/context/games/GameContext";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 import { MdRemoveRedEye } from "react-icons/md";
 
-function GameCard({ game, index }) {
-  const { getGame } = useContext(GameContext);
-  const { title, thumbnail, id } = game;
+function GameCard({ game }) {
+  const { title, thumbnail, id} = game;
 
   return (
     <div className="GameCard">
@@ -22,9 +20,8 @@ function GameCard({ game, index }) {
       />
       <h3 className="GameCard_title">{title}</h3>
       <Link
-        href={`${id}`}
+        href={`game/${id}`}
         className="GameCard_viewButton"
-        onClick={() => getGame(index)}
       >
         <MdRemoveRedEye className="GameCard_viewButton_icon" />
       </Link>
@@ -47,7 +44,7 @@ function GameCard({ game, index }) {
             object-fit: cover;
             object-position: 50% 50%;
             image-rendering: crisp-edges;
-            transition: all .3s;
+            transition: .3s;
           }
 
           .GameCard:hover .GameCard_img{
@@ -64,7 +61,7 @@ function GameCard({ game, index }) {
             color: white;
             text-align: center;
             z-index: 1;
-            transition: all .3s;
+            transition: .3s;
           }
 
           .GameCard:hover .GameCard_title{
@@ -80,7 +77,7 @@ function GameCard({ game, index }) {
             background-color: green;
             font-size: 20px;
             border-radius: 20px;
-            transition: all .3s;
+            transition: .3s;
           }
 
           .GameCard_viewButton_icon{

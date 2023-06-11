@@ -40,12 +40,12 @@ function Navbar() {
         <div className="menu">
           <ul className="menu_containerLinks">
             <li className="menu_containerLinks_item">
-              <p>Salir</p>
               <p>Favoritos</p>
             </li>
           </ul>
         </div>
       ) : null}
+      
       <style>{`
         .navbar {
           top: 0;
