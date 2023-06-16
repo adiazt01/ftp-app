@@ -1,0 +1,61 @@
+@import './theme/DarkTheme.scss';
+
+.GameCard {
+  position: relative;
+  width: 17rem;
+  height: 160px;
+  background-color: transparent;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  .img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    image-rendering: crisp-edges;
+    transition: 0.3s;
+  }
+
+  &:hover .img {
+    transform: scale(1.2);
+    filter: blur(5px) brightness(0.5);
+  }
+
+  .title {
+    position: absolute;
+    top: -3em;
+    font-size: 1.5em;
+    width: 10em;
+    font-weight: 900;
+    color: $title-color;
+    text-align: center;
+    z-index: 1;
+    transition: 0.3s;
+  }
+
+  &:hover .title {
+    top: 1.6em;
+  }
+
+  .viewButton {
+    position: absolute;
+    bottom: -2em;
+    padding: 4px 15px;
+    color: white;
+    border: 0;
+    background-color: green;
+    font-size: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+
+  &:hover .viewButton {
+    bottom: 0.7em;
+  }
+
+  .icon {
+    margin-bottom: -5px;
+  }
+}

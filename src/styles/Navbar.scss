@@ -1,0 +1,76 @@
+@import './theme/DarkTheme.scss';
+
+.navbar {
+  top: 0;
+  position: sticky;
+  width: 100%;
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  color: $title-color;
+  padding: 20px;
+  font-size: 20px;
+  z-index: 5;
+
+  .logo {
+    text-align: center;
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link {
+    color: $title-color;
+  }
+
+  .item {
+    margin-left: 20px;
+    list-style: none;
+
+    a {
+      color: $title-color;
+      text-decoration: none;
+    }
+  }
+
+  .menuButton {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: -12px;
+    margin-top: -4px;
+    height: 1em;
+    background: none;
+    font-size: 1.7em;
+    color: $title-color;
+    border: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  padding: 0px 20px 20px;
+  border-radius: 0px 0px 0px 20px;
+  color: $title-color;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  background-color: $primary-color;
+  width: auto;
+  height: auto;
+}
+
+.menu_containerLinks {
+  list-style: none;
+}
