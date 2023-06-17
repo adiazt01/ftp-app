@@ -1,19 +1,16 @@
-"use client";
+import Link from "next/link";
+import React from "react";
+import Button from "./Button";
 
-import GameContainer from "../components/container/GameContainer";
-import SearchBar from "../components/SearchBar";
-import useIntersection from "../hooks/useIntersection";
-
-function Posts() {
-  const {load, limit} = useIntersection()
+function page() {
 
   return (
     <>
-      <SearchBar />
-      <GameContainer load={load}></GameContainer>
-      <div ref={limit}></div>
+      <Link href={"/home"}>Home</Link>;<Link href={"/register"}>Register</Link>;
+      <Link href={"/login"}>login</Link>;
+      <Button />
     </>
   );
 }
 
-export default Posts;
+export default page;

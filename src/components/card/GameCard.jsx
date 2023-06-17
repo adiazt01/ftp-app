@@ -21,7 +21,7 @@ function GameCard({ game }) {
       />
       <h3 className="title">{title}</h3>
       <Link
-        href={`game/${id}`}
+        href={`/home/game/${id}`}
         className="viewButton"
       >
         <MdRemoveRedEye className="icon" />

@@ -10,7 +10,7 @@ function Navbar() {
   const links = [
     {
       label: "Home",
-      link: "/",
+      link: "/home",
     },
   ];
 
